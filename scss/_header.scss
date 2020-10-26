@@ -1,0 +1,321 @@
+@import 'var';
+
+.header {
+    &__bg {
+        background-image: url(../images/football.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__color {
+        background-color: rgb(10, 14, 52); 
+    }
+
+    &__sign {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        margin-bottom: 425px;
+    }
+    
+    &__logo {
+        margin-right: 40px;
+    }
+
+    &__text-sign {
+        color: #ffffff;
+        font-family: "ProximaLight", sans-serif;
+        font-size: 14px;
+        line-height: 34.49px;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 175px;
+
+        &-item {
+            padding: 15px 23px;
+            text-decoration: none;
+            color: #9071ea;
+            font-family: "ProximaLight", sans-serif;
+            font-size: 14px;
+            line-height: 34.49px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__title {
+        color: #ffffff;
+        font-family: "ProximaBold", sans-serif;
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 31.32px;
+        text-transform: uppercase;
+        letter-spacing: 4.96px;
+
+        &-first {
+            position: absolute;
+            z-index: 3;
+            bottom: 560px;
+            left: 0;
+        }
+
+        &-second {
+            position: absolute;
+            z-index: 1;
+            bottom: 465px;
+            right: 0;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        z-index: 2;
+        bottom: 377px;
+        left: 386px;
+    }
+
+    &__button {
+        padding-bottom: 128px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn  {
+        width: 320px;
+        padding: 15px 50px 15px 105px;
+        background-color: $primary-color;
+        border-radius: 54px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 16px 24px #0a0e34;
+
+        &:first-child {
+            margin-right: 50px;
+        }
+
+        &-first {
+            width: 162px;
+            color: #ffffff;
+            font-family: "ProximaLight", sans-serif;
+            font-size: 14px;
+            line-height: 21px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            margin-top: 10px;
+
+            &-margin {
+                width: 71px;
+            }
+        }
+
+        &-second {
+            width: 101px;
+            color: #ffffff;
+            font-family: "ProximaSemibold", sans-serif;
+            font-size: 14px;
+            line-height: 34.49px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+        }
+
+        &-apple {
+            background-image: url(../images/apple.png);
+            background-repeat: no-repeat;
+            background-position: 50px 25px;
+        }
+
+        &-google {
+            background-image: url(../images/google.png);
+            background-repeat: no-repeat;
+            background-position: 50px 25px;
+        }
+    }
+}
+
+@media (max-width: 1540px) {
+    .container {
+        width: 100%;
+    }
+
+    .header {
+
+        &__logo {
+            margin-left: 20px;
+        }
+
+        &__text-sign {
+            margin-right: 20px;
+        }
+
+        &__title {
+            width: 100%;
+            font-size: 64px;
+            line-height: 80px;
+            text-transform: uppercase;
+            letter-spacing: 3.52px;
+
+            &-first {  
+                bottom: 612px;
+                left: 90px;
+                z-index: 5;
+            }
+
+            &-second {
+                bottom: 455px;
+                right: auto;
+                left: 200px;
+                z-index: 5;
+            }
+        }
+
+        &__line {
+            bottom: 414px;
+            left: 269px;
+        }
+
+        &__nav {
+            margin-bottom: 0;
+            justify-content: space-around;
+            
+            &-item:last-child {
+                padding-right: 23px;
+            }
+        }
+
+        &__sign {
+            margin-bottom: 604px;
+        }
+
+        &__button {
+            padding-bottom: 91px;
+        }
+
+    }
+
+}
+
+@media (max-width: 767px) {
+    body {
+        min-width: 320px;
+    }
+
+    .header {
+        &__text-sign {
+            display: none;
+        }
+
+        &__bg {
+            background-image: url(../images/bg_mobile.png);
+            background-size: cover;
+            background-position: initial;
+        }
+
+        &__logo {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__sign {
+            margin-bottom: 345px;
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: 1.76px;
+
+            &-first {
+                left: 15px;
+                bottom: 436px;
+            }
+
+            &-second {
+                bottom: 337px;
+                left: 67px;
+            }
+        }
+
+        &__line {
+            width: 139px;
+            height: 174px;
+            bottom: 331px;
+            left: 87px;
+        }
+
+        &__nav {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 20px;
+
+            &-item {
+                padding: 0 18px;
+                font-size: 12px;
+            }
+        }
+
+        &__btn {
+            width: 142px;
+            padding: 0px 7px 10px 5px;
+
+            &:first-child {
+                margin-right: 7px;
+            }
+        }
+
+        &__btn-first {
+            font-size: 8px;
+            line-height: 12px;
+            margin-top: 10px;
+            width: 70%;
+            margin-left: 35px;
+
+            &-margin {
+                margin-left: 6px;
+                width: 84%;
+            }
+        }
+
+        &__btn-second {
+            font-size: 8px;  
+            line-height: 12px;
+            margin-left: 14px;
+            width: 74%;
+
+            &-margin {
+                margin-left: 15px;
+                width: 85%;
+            }
+        }
+
+        &__btn-apple {
+            background-size: 17px;
+            background-position: 15px 12px;
+        }
+
+        &__btn-google {
+            background-size: 17px;
+            background-position: 15px 12px;
+        }
+
+        &__button {
+            width: 100%;
+            bottom: 52px;
+        }
+    }
+}
